@@ -25,10 +25,10 @@ COPY --from=portainerci/portainer-ee:pr2323 /edge-update.yml.mustache /opt/porta
 COPY --from=portainerci/portainer-ee:pr2323 /helm /opt/portainer/
 COPY --from=portainerci/portainer-ee:pr2323 /kompose /opt/portainer/
 COPY --from=portainerci/portainer-ee:pr2323 /kubectl /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /pod-security-policy /opt/portainer/
+COPY --from=portainerci/portainer-ee:pr2323 /pod-security-policy /opt/portainer/pod-security-policy
 COPY --from=portainerci/portainer-ee:pr2323 /portainer /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /public /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /storybook /opt/portainer/
+COPY --from=portainerci/portainer-ee:pr2323 /public /opt/portainer/public
+COPY --from=portainerci/portainer-ee:pr2323 /storybook /opt/portainer/storybook
 
 # Copy root filesystem
 COPY rootfs /
