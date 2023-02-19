@@ -18,7 +18,7 @@ RUN \
     #     "https://github.com/portainer/portainer/releases/download/2.17.0/portainer-2.17.0-linux-${ARCH}.tar.gz" \
     #     | tar zxvf - -C /opt/
 
-COPY --from=portainerci/portainer-ee:pr2323 /dev /opt/portainer/
+#COPY --from=portainerci/portainer-ee:pr2323 /dev /opt/portainer/
 COPY --from=portainerci/portainer-ee:pr2323 /docker /opt/portainer/
 COPY --from=portainerci/portainer-ee:pr2323 /docker-compose /opt/portainer/
 COPY --from=portainerci/portainer-ee:pr2323 /edge-update.yml.mustache /opt/portainer/
