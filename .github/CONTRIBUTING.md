@@ -25,5 +25,5 @@ Even better: You could submit a pull request with a fix / new feature!
    developers, or if you do not have permission to do that, you may request
    the second reviewer to merge it for you.
 
-[github]: https://github.com/lmagyar/homeassistant-addon-portainer/issues
-[prs]: https://github.com/lmagyar/homeassistant-addon-portainer/pulls
+[github]: https://github.com/kleberbaum/homeassistant-addon-portainer/issues
+[prs]: https://github.com/kleberbaum/homeassistant-addon-portainer/pulls

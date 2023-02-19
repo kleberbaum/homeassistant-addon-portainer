@@ -3,8 +3,8 @@ name: Portainer
 version: 2.1.17
 slug: portainer
 description: Manage your Docker environment with ease
-url: https://github.com/lmagyar/homeassistant-addon-portainer
-codenotary: lmagyar1973@gmail.com
+url: https://github.com/kleberbaum/homeassistant-addon-portainer
+codenotary: kleber@snek.at
 advanced: true
 ingress: true
 ingress_stream: true
@@ -28,4 +28,4 @@ schema:
 backup_exclude:
   - backups
   - docker_config/cli-plugins
-image: lmagyar/{arch}-addon-portainer
+image: kleberbaum/{arch}-addon-portainer

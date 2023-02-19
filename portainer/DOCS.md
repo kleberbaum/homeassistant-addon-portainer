@@ -42,7 +42,7 @@ To be able to use this add-on, you'll need to disable protection mode on this
 add-on. Without it, the add-on is unable to access Docker.
 
 1. Navigate in your Home Assistant frontend to **Settings** -> **Add-ons** -> **Add-on Store**.
-2. In the **...** menu at the top right corner click **Repositories**, add `https://github.com/lmagyar/homeassistant-addon-portainer` as repository.
+2. In the **...** menu at the top right corner click **Repositories**, add `https://github.com/kleberbaum/homeassistant-addon-portainer` as repository.
 3. Find the "Portainer" add-on and click it. If it doesn't show up, wait until HA refreshes the information about the add-on, or click **Reload** in the **...** menu at the top right corner.
 4. Click on the "INSTALL" button.
 
@@ -146,13 +146,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/lmagyar/homeassistant-addon-portainer/graphs/contributors
+[contributors]: https://github.com/kleberbaum/homeassistant-addon-portainer/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-portainer/68836?u=frenck
 [frenck]: https://github.com/frenck
-[issue]: https://github.com/lmagyar/homeassistant-addon-portainer/issues
+[issue]: https://github.com/kleberbaum/homeassistant-addon-portainer/issues
 [reddit]: https://reddit.com/r/homeassistant
 [semver]: http://semver.org/spec/v2.0.0.html
-[warning_stripe]: https://github.com/lmagyar/homeassistant-addon-portainer/raw/main/images/warning_stripe_wide.png
+[warning_stripe]: https://github.com/kleberbaum/homeassistant-addon-portainer/raw/main/images/warning_stripe_wide.png
 [community_addon]: https://github.com/hassio-addons/addon-portainer
