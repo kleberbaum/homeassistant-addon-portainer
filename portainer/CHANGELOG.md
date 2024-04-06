@@ -1,5 +1,68 @@
 # Changelog
 
+## 2.4.3 (forked)
+
+- Update portainer/portainer to v2.20.0
+- Update Add-on base image to v15.0.7 (Update Alpine base image to v3.19.1)
+
+## 2.4.2 (forked)
+
+- Remove `log_level` fom the documentation, this is not used by the add-on
+- Update portainer/portainer to v2.19.4
+- Update Add-on base image to v14.3.3
+
+## 2.4.1 (forked)
+
+- Update portainer/portainer to v2.19.3
+
+## 2.4.0 (forked)
+
+***BREAKING CHANGES:***
+- Drop support for armhf & i386
+
+Nonbreaking changes:
+- Add HEALTCHECK support
+- Update portainer/portainer to v2.19.2
+- Update Add-on base image to v14.3.2
+
+## 2.3.2 (forked)
+
+- Update portainer/portainer to v2.19.1
+
+## 2.3.1 (forked)
+
+- Update portainer/portainer to v2.19.0
+- Update Add-on base image to v14.1.0 (Update Alpine base image to v3.18.3)
+
+## 2.3.0 (forked)
+
+- Update portainer/portainer to v2.18.4
+- Update Add-on base image to v14.0.2
+- Sign add-on with Sigstore Cosign
+
+## 2.2.3 (forked)
+
+- Update Portainer to v2.18.3
+
+## 2.2.2 (forked)
+
+- Update Add-on base image to v14 (Update Alpine base image to v3.18.0)
+
+## 2.2.1 (forked)
+
+- Update Portainer to v2.18.2
+
+## 2.2.0 (forked)
+
+- Update Portainer to v2.18.1
+- Migrate add-on layout to S6 Overlay
+- Update Add-on base image to v13.2.2
+
+## 2.1.18 (forked)
+
+- Bump Portainer version from 2.17.0 to 2.17.1
+- Bump base image from 13.1.1 to 13.1.2
+
 ## 2.1.17 (forked)
 
 - Bump Portainer version from 2.16.2 to 2.17.0

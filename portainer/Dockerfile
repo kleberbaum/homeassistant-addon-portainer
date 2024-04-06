@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:15.0.7
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -6,32 +6,22 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-ARG BUILD_ARCH
+ARG BUILD_ARCH=amd64
+ARG PORTAINER_VERSION="2.20.0"
 RUN \
     if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
-    && if [ "${BUILD_ARCH}" = "armhf" ]; then ARCH="arm"; fi \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then ARCH="arm"; fi \
     && if [ "${BUILD_ARCH}" = "amd64" ]; then ARCH="amd64"; fi \
     \
-    && mkdir /opt/portainer/
-    # && curl -L -s \
-    #     "https://github.com/portainer/portainer/releases/download/2.17.0/portainer-2.17.0-linux-${ARCH}.tar.gz" \
-    #     | tar zxvf - -C /opt/
-
-#COPY --from=portainerci/portainer-ee:pr2323 /dev /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /docker /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /docker-compose /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /edge-update.yml.mustache /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /helm /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /kompose /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /kubectl /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /pod-security-policy /opt/portainer/pod-security-policy
-COPY --from=portainerci/portainer-ee:pr2323 /portainer /opt/portainer/
-COPY --from=portainerci/portainer-ee:pr2323 /public /opt/portainer/public
-COPY --from=portainerci/portainer-ee:pr2323 /storybook /opt/portainer/storybook
+    && curl -L -s \
+        "https://github.com/portainer/portainer/releases/download/${PORTAINER_VERSION}/portainer-${PORTAINER_VERSION}-linux-${ARCH}.tar.gz" \
+        | tar zxvf - -C /opt/
 
 # Copy root filesystem
 COPY rootfs /
+
+HEALTHCHECK \
+    CMD if [ "200" = $(curl -s -o /dev/null -w "%{http_code}" "http://localhost:8099/api/system/status") ]; then exit 0; else exit 1; fi
 
 # Build arguments
 ARG BUILD_ARCH

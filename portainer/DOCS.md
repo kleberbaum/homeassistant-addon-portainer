@@ -1,10 +1,10 @@
-# Home Assistant ~Community~ Custom Add-on: Portainer
+# Home Assistant Custom Add-on: Portainer
 
 ![Warning][warning_stripe]
 
-> This is a **fork** of the DEPRECATED [community add-on][community_addon]! This makes it available again.
+> This is a **fork** of the deprecated [community add-on][community_addon]!
 >
-> Updates are released when Portainer releases new versions.
+> This makes it available again.
 
 ![Warning][warning_stripe]
 
@@ -15,23 +15,6 @@ It has never been so easy to manage Docker. Portainer provides a detailed
 overview of Docker and allows you to manage containers, images, networks and
 volumes.
 
-## WARNING 1
-
-The Portainer add-on is really powerful and gives you access to virtually
-your whole system. While this add-on is created and maintained with care and
-with security in mind, in the wrong or inexperienced hands,
-it could damage your system.
-
-## WARNING 2
-
-The Portainer add-on is meant for debugging Home Assistant and its containers.
-It has not meant or designed for managing or deploying your custom software
-or third-party containers.
-
-**Home Assistant DOES NOT SUPPORT running third party containers**
-on Home Assistant OS or Supervised installation types. Ignoring this, will
-render your system as unsupported!
-
 ## Installation
 
 To install this add-on, you'll first need to go to your profile and turn on
@@ -41,62 +24,31 @@ for "Portainer" and install it as you would any other add-on.
 To be able to use this add-on, you'll need to disable protection mode on this
 add-on. Without it, the add-on is unable to access Docker.
 
-1. Navigate in your Home Assistant frontend to **Settings** -> **Add-ons** -> **Add-on Store**.
-2. In the **...** menu at the top right corner click **Repositories**, add `https://github.com/kleberbaum/homeassistant-addon-portainer` as repository.
-3. Find the "Portainer" add-on and click it. If it doesn't show up, wait until HA refreshes the information about the add-on, or click **Reload** in the **...** menu at the top right corner.
-4. Click on the "INSTALL" button.
+1. Navigate in your Home Assistant frontend to **Settings** -> **Add-ons** ->
+   **Add-on Store**.
+1. In the **...** menu at the top right corner click **Repositories**, add
+   `https://github.com/kleberbaum/homeassistant-addon-portainer` as repository.
+1. Find the "Portainer" add-on and click it. If it doesn't show up, wait until
+   HA refreshes the information about the add-on, or click **Check for updates**
+   in the **...** menu at the top right corner.
+1. Click on the "INSTALL" button.
 
 ## How to use
 
 1. Under the Info tab set the "Protection mode" switch to off.
-2. Start the add-on.
-3. Check the add-on log output to see the result.
+1. Start the add-on.
+1. Check the add-on log output to see the result.
 
 ## Add-on Configuration
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
-
-Example add-on configuration:
-
 ```yaml
-log_level: info
 agent_secret: password
 ```
-
-**Note**: _This is just an example, don't copy and paste it! Create your own!_
-
-### Option: `log_level`
-
-The `log_level` option controls the level of log output by the addon and can
-be changed to be more or less verbose, which might be useful when you are
-dealing with an unknown issue. Possible values are:
-
-- `trace`: Show every detail, like all called internal functions.
-- `debug`: Shows detailed debug information.
-- `info`: Normal (usually) interesting events.
-- `warning`: Exceptional occurrences that are not errors.
-- `error`: Runtime errors that do not require immediate action.
-- `fatal`: Something went terribly wrong. Add-on becomes unusable.
-
-Please note that each level automatically includes log messages from a
-more severe level, e.g., `debug` also shows `info` messages. By default,
-the `log_level` is set to `info`, which is the recommended setting unless
-you are troubleshooting.
 
 ### Option: `agent_secret`
 
 An option to set a shared agent secret. Must also be set in the remote agent
 as an Environment variable.
-
-## Releases
-
-Releases are based on [Semantic Versioning][semver], and use the format
-of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
-based on the following:
-
-- `MAJOR`: Incompatible or major changes.
-- `MINOR`: Backwards-compatible new features and enhancements.
-- `PATCH`: Backwards-compatible bugfixes and package updates.
 
 ## Support
 
@@ -104,14 +56,11 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
+- The [Home Assistant Discord chat server][discord].
 - The Home Assistant [Community Forum][forum].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
 
-You could also [open an issue here][issue] GitHub.
+You could also [open an issue here][issue] on GitHub.
 
 ## Authors & contributors
 

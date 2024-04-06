@@ -1,6 +1,6 @@
 ---
 name: Portainer
-version: 2.1.17
+version: 2.4.3
 slug: portainer
 description: Manage your Docker environment with ease
 url: https://github.com/kleberbaum/homeassistant-addon-portainer
@@ -11,10 +11,9 @@ ingress_stream: true
 startup: services
 panel_icon: mdi:docker
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
+  - armv7
 init: false
 ports:
   8000/tcp: null
@@ -23,7 +22,6 @@ ports_description:
 hassio_api: true
 docker_api: true
 schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
   agent_secret: str?
 backup_exclude:
   - backups
